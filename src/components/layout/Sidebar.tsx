@@ -1,6 +1,12 @@
+"use client";
+import { useAppStore } from "@/store/useAppStore";
+
 export default function Sidebar() {
+  const { sidebarOpen } = useAppStore();
+
+  if (!sidebarOpen) return null;
   return (
-    <div className="w-64 bg-gray-900 text-white h-full p-5"> 
+    <div className="w-64 bg-gray-900 text-white h-full p-5">
       <h1 className="text-2xl font-bold mb-8">WorkFlowX</h1>
 
       <nav className="space-y-3">
